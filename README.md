@@ -4,7 +4,7 @@
 
 ---
 
-### Made with ❤️ by [Shaif Arfan](https://www.instagram.com/shaifarfan08/)
+### Made with ❤️ by [Soham Ambekar](https://www.linkedin.com/in/sohamambekar/)
 
 Like my works and want to support me?
 
