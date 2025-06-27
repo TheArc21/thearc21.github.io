@@ -882,42 +882,71 @@ p {
     }
     /* End Hero */
 
-    /* Projects */
-    #projects .project-item {
-        height: 450px;
-    }
+ /* Projects section */
+#projects {
+    background-image: url(./img/hero-bg.png); /* Add the background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    position: relative; /* Needed for the overlay */
+    z-index: 1; /* Ensure overlay works */
+}
 
-    #projects .project-info {
-        padding: var(--spacing-xxl);
-    }
+#projects::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-color); /* Use overlay for readability */
+    z-index: -1;
+}
 
-    #projects .project-info h1 {
-        font-size: var(--font-size-h1);
-    }
-    #projects .project-info h2 {
-        font-size: var(--font-size-h2);
-    }
-    #projects .project-info ul li {
-        font-size: var(--font-size-p);
-    }
+#projects .projects {
+    /* Keep existing styles */
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) 0;
+    /* Remove background-color here as it's now on #projects directly */
+    /* background-color: var(--body-bg-color); */
+}
+
+#projects .projects-header h1 {
+    /* Existing styles */
+    margin-bottom: var(--spacing-xl);
+    color: var(--heading-color); /* Ensure heading remains readable on overlay */
+}
     /* End Projects */
 
     /* About */
-    #about .col-left {
-        width: 400px;
-        height: 500px;
-    }
+#about {
+    background-image: url(./img/hero-bg.png); /* Add the background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    position: relative; /* Needed for the overlay */
+    z-index: 1; /* Ensure overlay works */
+    /* background-color: var(--body-bg-color); Removed to reveal bg image */
+}
 
-    #about .col-right {
-        width: calc(100% - 400px - var(--spacing-xl));
-        padding-left: var(--spacing-xl);
-    }
+#about::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-color); /* Add a dark overlay for readability */
+    z-index: -1;
+}
 
-    #about .about .col-left .about-img::after {
-        left: -50px;
-        top: 40px;
-        border: 10px solid var(--primary-color);
-    }
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) var(--spacing-md);
+}
 
     #about .col-right h2 {
         font-size: 2.5rem;
@@ -929,9 +958,25 @@ p {
     /* End About */
 
     /* Contact */
-    #contact .contact-items {
-        gap: var(--spacing-md);
-    }
+#contact {
+    background-image: url(./img/hero-bg.png); /* Add the background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    position: relative; /* Needed for the overlay */
+    z-index: 1; /* Ensure overlay works */
+    /* background-color: var(--body-bg-color); Removed to reveal bg image */
+}
+
+#contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-color); /* Add a dark overlay for readability */
+    z-index: -1;
+}
     #contact .contact-item {
         width: 30%;
     }
